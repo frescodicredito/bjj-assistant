@@ -8,93 +8,99 @@
 </head>
 <body>
     <div class="container">
+        <button id="logout-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logout-icon">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+            <span>Logout</span>
+        </button>
         <div class="main-container">
-            <div class="header">
-                <h1>BJJ Assistant</h1>
-                <button id="logout-button">Logout</button>
-            </div>
             
-            <div class="content-section">
-                <h2>Tecniche di Base</h2>
-                <ul class="technique-list">
-                    <li class="technique-item" onclick="toggleDetails('basic1')">
-                        Posizione di guardia chiusa
-                        <div id="basic1" class="technique-details hidden">
-                            <p>La guardia chiusa è una posizione fondamentale nel BJJ dove si avvolge le gambe attorno alla vita dell'avversario.</p>
-                            <div class="video-container">
-                                <p><strong>Video di riferimento:</strong> <a href="https://www.youtube.com/watch?v=example1" target="_blank">Guarda il tutorial</a></p>
-                            </div>
-                            <div class="notes-section">
-                                <p><strong>Note personali:</strong></p>
-                                <p>Ricorda di mantenere la schiena piatta sul tappeto e di controllare la postura dell'avversario.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="technique-item" onclick="toggleDetails('basic2')">
-                        Passaggio di guardia base
-                        <div id="basic2" class="technique-details hidden">
-                            <p>Il passaggio di guardia base consiste nel superare le gambe dell'avversario per raggiungere una posizione dominante.</p>
-                            <div class="video-container">
-                                <p><strong>Video di riferimento:</strong> <a href="https://www.youtube.com/watch?v=example2" target="_blank">Guarda il tutorial</a></p>
-                            </div>
-                            <div class="notes-section">
-                                <p><strong>Note personali:</strong></p>
-                                <p>Mantieni una buona pressione e controlla i fianchi dell'avversario durante il passaggio.</p>
-                            </div>
-                        </div>
-                    </li>
+        <div class="content-section">
+            <h2>Custom GPT per Instructional BJJ</h2>
+            <div class="gpt-intro">
+                <p>Questa sezione contiene link a chatbot personalizzati basati su instructional di BJJ. Ogni chatbot è stato addestrato con trascrizioni, riferimenti ai video e indici degli instructional, per aiutarti a navigare e comprendere meglio i contenuti.</p>
+                <p>Clicca sull'immagine di un instructional per accedere al relativo chatbot su OpenAI, dove potrai:</p>
+                <ul>
+                    <li>Fare domande specifiche sulle tecniche mostrate</li>
+                    <li>Ottenere spiegazioni dettagliate dei concetti</li>
+                    <li>Navigare facilmente nell'indice dei contenuti</li>
+                    <li>Ricevere riferimenti ai timestamp esatti dei video</li>
                 </ul>
             </div>
             
-            <div class="content-section">
-                <h2>Tecniche Avanzate</h2>
-                <ul class="technique-list">
-                    <li class="technique-item" onclick="toggleDetails('advanced1')">
-                        Triangolo dalla guardia
-                        <div id="advanced1" class="technique-details hidden">
-                            <p>Il triangolo è una sottomissione che utilizza le gambe per strangolare l'avversario.</p>
-                            <div class="video-container">
-                                <p><strong>Video di riferimento:</strong> <a href="https://www.youtube.com/watch?v=example3" target="_blank">Guarda il tutorial</a></p>
-                            </div>
-                            <div class="notes-section">
-                                <p><strong>Note personali:</strong></p>
-                                <p>Ricorda di tirare la testa dell'avversario e di stringere le gambe per completare la sottomissione.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="technique-item" onclick="toggleDetails('advanced2')">
-                        Armbar dalla mount
-                        <div id="advanced2" class="technique-details hidden">
-                            <p>L'armbar dalla mount è una leva articolare che attacca il gomito dell'avversario.</p>
-                            <div class="video-container">
-                                <p><strong>Video di riferimento:</strong> <a href="https://www.youtube.com/watch?v=example4" target="_blank">Guarda il tutorial</a></p>
-                            </div>
-                            <div class="notes-section">
-                                <p><strong>Note personali:</strong></p>
-                                <p>Mantieni il controllo del braccio dell'avversario durante tutta l'esecuzione della tecnica.</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="content-section">
-                <h2>Strategie di Gara</h2>
-                <ul class="technique-list">
-                    <li class="technique-item" onclick="toggleDetails('strategy1')">
-                        Gestione del punteggio
-                        <div id="strategy1" class="technique-details hidden">
-                            <p>Strategie per gestire il punteggio durante una competizione di BJJ.</p>
-                            <div class="video-container">
-                                <p><strong>Video di riferimento:</strong> <a href="https://www.youtube.com/watch?v=example5" target="_blank">Guarda il tutorial</a></p>
-                            </div>
-                            <div class="notes-section">
-                                <p><strong>Note personali:</strong></p>
-                                <p>Ricorda di mantenere la calma e di essere consapevole del tempo rimanente e del punteggio.</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            <div class="instructional-gallery">
+                <div class="instructional-item">
+                    <a href="https://chat.openai.com/g/g-custom-danaher-guard" target="_blank">
+                        <img src="immagini/open_guard_danaher.webp" alt="John Danaher Open Guard">
+                        <div class="instructional-title">John Danaher - Open Guard</div>
+                    </a>
+                </div>
+                
+                <div class="instructional-item">
+                    <a href="https://chat.openai.com/g/g-custom-danaher-closed-guard" target="_blank">
+                        <img src="immagini/closed_guard_danaher.webp" alt="John Danaher Closed Guard">
+                        <div class="instructional-title">John Danaher - Closed Guard</div>
+                    </a>
+                </div>
+                
+                <div class="instructional-item">
+                    <a href="https://chat.openai.com/g/g-custom-danaher-half-guard" target="_blank">
+                        <img src="immagini/half_guard_danaher.webp" alt="John Danaher Half Guard">
+                        <div class="instructional-title">John Danaher - Half Guard</div>
+                    </a>
+                </div>
+                
+                <div class="instructional-item">
+                    <a href="https://chat.openai.com/g/g-custom-danaher-guard-passing" target="_blank">
+                        <img src="immagini/guard_passing_danaher.webp" alt="John Danaher Guard Passing">
+                        <div class="instructional-title">John Danaher - Guard Passing</div>
+                    </a>
+                </div>
+                
+                <div class="instructional-item">
+                    <a href="https://chat.openai.com/g/g-custom-danaher-guard-retention" target="_blank">
+                        <img src="immagini/guard_retention_danaher.webp" alt="John Danaher Guard Retention">
+                        <div class="instructional-title">John Danaher - Guard Retention</div>
+                    </a>
+                </div>
+                
+                <div class="instructional-item">
+                    <a href="https://chat.openai.com/g/g-custom-danaher-pin-escapes" target="_blank">
+                        <img src="immagini/pin_escapes_danaher.webp" alt="John Danaher Pin Escapes">
+                        <div class="instructional-title">John Danaher - Pin Escapes</div>
+                    </a>
+                </div>
+                
+                <div class="instructional-item">
+                    <a href="https://chat.openai.com/g/g-custom-musumeci-guard-passing" target="_blank">
+                        <img src="immagini/guard_passing_musumeci.webp" alt="Mikey Musumeci Guard Passing">
+                        <div class="instructional-title">Mikey Musumeci - Guard Passing</div>
+                    </a>
+                </div>
+                
+                <div class="instructional-item">
+                    <a href="https://chat.openai.com/g/g-custom-musumeci-guard-attacking" target="_blank">
+                        <img src="immagini/guard_attacking_musumeci.webp" alt="Mikey Musumeci Guard Attacking">
+                        <div class="instructional-title">Mikey Musumeci - Guard Attacking</div>
+                    </a>
+                </div>
+                
+                <div class="instructional-item">
+                    <a href="https://chat.openai.com/g/g-custom-musumeci-berimbolo" target="_blank">
+                        <img src="immagini/berimbolo_part1_musumeci.webp" alt="Mikey Musumeci Berimbolo Part 1">
+                        <div class="instructional-title">Mikey Musumeci - Berimbolo Part 1</div>
+                    </a>
+                </div>
+                
+                <div class="instructional-item">
+                    <a href="https://chat.openai.com/g/g-custom-musumeci-collar-sleeve" target="_blank">
+                        <img src="immagini/collar_sleeve_inside_musumeci.webp" alt="Mikey Musumeci Collar Sleeve Inside">
+                        <div class="instructional-title">Mikey Musumeci - Collar Sleeve Inside</div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
