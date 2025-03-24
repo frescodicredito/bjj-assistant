@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BJJ Assistant - Contenuti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="header">
+                <h1>BJJ Assistant</h1>
+                <button id="logout-button">Logout</button>
+            </div>
+            
+            <div class="content-section">
+                <h2>Tecniche di Base</h2>
+                <ul class="technique-list">
+                    <li class="technique-item" onclick="toggleDetails('basic1')">
+                        Posizione di guardia chiusa
+                        <div id="basic1" class="technique-details hidden">
+                            <p>La guardia chiusa è una posizione fondamentale nel BJJ dove si avvolge le gambe attorno alla vita dell'avversario.</p>
+                            <div class="video-container">
+                                <p><strong>Video di riferimento:</strong> <a href="https://www.youtube.com/watch?v=example1" target="_blank">Guarda il tutorial</a></p>
+                            </div>
+                            <div class="notes-section">
+                                <p><strong>Note personali:</strong></p>
+                                <p>Ricorda di mantenere la schiena piatta sul tappeto e di controllare la postura dell'avversario.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="technique-item" onclick="toggleDetails('basic2')">
+                        Passaggio di guardia base
+                        <div id="basic2" class="technique-details hidden">
+                            <p>Il passaggio di guardia base consiste nel superare le gambe dell'avversario per raggiungere una posizione dominante.</p>
+                            <div class="video-container">
+                                <p><strong>Video di riferimento:</strong> <a href="https://www.youtube.com/watch?v=example2" target="_blank">Guarda il tutorial</a></p>
+                            </div>
+                            <div class="notes-section">
+                                <p><strong>Note personali:</strong></p>
+                                <p>Mantieni una buona pressione e controlla i fianchi dell'avversario durante il passaggio.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h2>Tecniche Avanzate</h2>
+                <ul class="technique-list">
+                    <li class="technique-item" onclick="toggleDetails('advanced1')">
+                        Triangolo dalla guardia
+                        <div id="advanced1" class="technique-details hidden">
+                            <p>Il triangolo è una sottomissione che utilizza le gambe per strangolare l'avversario.</p>
+                            <div class="video-container">
+                                <p><strong>Video di riferimento:</strong> <a href="https://www.youtube.com/watch?v=example3" target="_blank">Guarda il tutorial</a></p>
+                            </div>
+                            <div class="notes-section">
+                                <p><strong>Note personali:</strong></p>
+                                <p>Ricorda di tirare la testa dell'avversario e di stringere le gambe per completare la sottomissione.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="technique-item" onclick="toggleDetails('advanced2')">
+                        Armbar dalla mount
+                        <div id="advanced2" class="technique-details hidden">
+                            <p>L'armbar dalla mount è una leva articolare che attacca il gomito dell'avversario.</p>
+                            <div class="video-container">
+                                <p><strong>Video di riferimento:</strong> <a href="https://www.youtube.com/watch?v=example4" target="_blank">Guarda il tutorial</a></p>
+                            </div>
+                            <div class="notes-section">
+                                <p><strong>Note personali:</strong></p>
+                                <p>Mantieni il controllo del braccio dell'avversario durante tutta l'esecuzione della tecnica.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h2>Strategie di Gara</h2>
+                <ul class="technique-list">
+                    <li class="technique-item" onclick="toggleDetails('strategy1')">
+                        Gestione del punteggio
+                        <div id="strategy1" class="technique-details hidden">
+                            <p>Strategie per gestire il punteggio durante una competizione di BJJ.</p>
+                            <div class="video-container">
+                                <p><strong>Video di riferimento:</strong> <a href="https://www.youtube.com/watch?v=example5" target="_blank">Guarda il tutorial</a></p>
+                            </div>
+                            <div class="notes-section">
+                                <p><strong>Note personali:</strong></p>
+                                <p>Ricorda di mantenere la calma e di essere consapevole del tempo rimanente e del punteggio.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

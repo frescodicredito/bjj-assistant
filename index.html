@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BJJ Assistant - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <h1>BJJ Assistant</h1>
+            <div class="logo">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="#f8f8f8" stroke="#3498db" stroke-width="2"/>
+                    <path d="M30,35 Q50,20 70,35 Q85,50 70,65 Q50,80 30,65 Q15,50 30,35" fill="none" stroke="#3498db" stroke-width="3"/>
+                    <circle cx="50" cy="50" r="10" fill="#3498db"/>
+                </svg>
+            </div>
+            <p>Inserisci la password per accedere ai contenuti</p>
+            <div id="login-form">
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button id="login-button">Accedi</button>
+            </div>
+            <div id="error-message" class="hidden">Password non corretta. Riprova.</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
