@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Password corretta per accedere al contenuto
-    const correctPassword = 'bjj2023';
+    const correctPassword = 'bjj2025';
     
     // Elementi del DOM
     const loginForm = document.getElementById('login-form');
