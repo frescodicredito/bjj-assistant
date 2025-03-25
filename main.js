@@ -24,6 +24,61 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reindirizza alla pagina di login
         window.location.href = 'index.html';
     }
+    
+    // Gestione del tema
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const themeLabel = document.querySelector('.theme-label');
+    const slider = document.querySelector('.slider');
+    
+    // Funzione per aggiornare l'etichetta del tema
+    function updateThemeLabel(isDark) {
+        themeLabel.textContent = `Dark Mode (${isDark ? 'on' : 'off'})`;
+    }
+    
+    // Funzione per applicare il tema
+    function applyTheme(isDark) {
+        if (isDark) {
+            body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            slider.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
+        } else {
+            body.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+            slider.style.backgroundColor = '#ccc';
+        }
+        updateThemeLabel(isDark);
+        themeToggle.checked = isDark;
+    }
+    
+    // Carica il tema salvato dal localStorage o usa il tema di sistema
+    function initializeTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            applyTheme(savedTheme === 'dark');
+        } else {
+            // Usa le preferenze del sistema
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            applyTheme(prefersDark);
+        }
+    }
+    
+    // Inizializza il tema
+    initializeTheme();
+    
+    // Gestisce il cambio di tema
+    themeToggle.addEventListener('change', function() {
+        applyTheme(this.checked);
+    });
+    
+    // Ascolta i cambiamenti del tema di sistema
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function(e) {
+        if (!localStorage.getItem('theme')) {
+            applyTheme(e.matches);
+        }
+    });
+    
+
 });
 
 // Funzione per mostrare/nascondere i dettagli delle tecniche

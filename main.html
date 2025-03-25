@@ -109,41 +109,5 @@
     </div>
     
     <script src="main.js"></script>
-    <script>
-        // Inizializza il tema quando il documento è caricato
-        document.addEventListener('DOMContentLoaded', () => {
-            const themeToggle = document.getElementById('theme-toggle');
-            const body = document.body;
-
-            // Carica il tema salvato dal localStorage
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                body.setAttribute('data-theme', 'dark');
-                themeToggle.checked = true;
-            }
-
-            // Gestisce il cambio di tema
-            const themeLabel = document.querySelector('.theme-label');
-            
-            function updateThemeLabel(isDark) {
-                themeLabel.textContent = `Dark Mode (${isDark ? 'on' : 'off'})`;
-            }
-            
-            // Imposta l'etichetta iniziale
-            updateThemeLabel(savedTheme === 'dark');
-            
-            themeToggle.addEventListener('change', () => {
-                if (themeToggle.checked) {
-                    body.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                    updateThemeLabel(true);
-                } else {
-                    body.removeAttribute('data-theme');
-                    localStorage.setItem('theme', 'light');
-                    updateThemeLabel(false);
-                }
-            });
-        });
-    </script>
 </body>
 </html>
