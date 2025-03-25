@@ -18,8 +18,17 @@
         </button>
         <div class="main-container">
             
-        <div class="content-section">
-            <h2>BJJ Assistant</h2>
+        <div class="header">
+                <div class="theme-control">
+                    <div class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </div>
+                    <span class="theme-label">Dark Mode (off)</span>
+                </div>
+                <h2 class="centered-title">BJJ Assistant</h2>
+            </div>
+            <div class="content-section">
             <div class="gpt-intro">
                 <p>Questi chatbot personalizzati ti aiutano a esplorare in profondità gli instructional BJJ, offrendo spiegazioni dettagliate e link diretti ai punti esatti del video. Puoi fare domande su tecniche specifiche, concetti o transizioni, e ricevere risposte chiare con riferimento immediato alla dimostrazione dell'istruttore.</p>
                 <p>Ogni assistente è basato sulla trascrizione completa di un singolo instructional e ne rispecchia terminologia, struttura e approccio didattico, rendendolo uno strumento utile per ripassare, approfondire o integrare il lavoro fatto in palestra.</p>
@@ -100,5 +109,41 @@
     </div>
     
     <script src="main.js"></script>
+    <script>
+        // Inizializza il tema quando il documento è caricato
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Carica il tema salvato dal localStorage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.setAttribute('data-theme', 'dark');
+                themeToggle.checked = true;
+            }
+
+            // Gestisce il cambio di tema
+            const themeLabel = document.querySelector('.theme-label');
+            
+            function updateThemeLabel(isDark) {
+                themeLabel.textContent = `Dark Mode (${isDark ? 'on' : 'off'})`;
+            }
+            
+            // Imposta l'etichetta iniziale
+            updateThemeLabel(savedTheme === 'dark');
+            
+            themeToggle.addEventListener('change', () => {
+                if (themeToggle.checked) {
+                    body.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    updateThemeLabel(true);
+                } else {
+                    body.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                    updateThemeLabel(false);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
