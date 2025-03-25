@@ -7,23 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <button id="logout-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logout-icon">
-                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                <polyline points="16 17 21 12 16 7"></polyline>
-                <line x1="21" y1="12" x2="9" y2="12"></line>
-            </svg>
-            <span>Logout</span>
-        </button>
-        <div class="main-container">
-            
-        <div class="header">
-                <h2 class="centered-title">BJJ Assistant</h2>
-            </div>
-            <div class="content-section">
+    <div class="app-container">
+        <header class="app-header">
+            <h2 class="title">BJJ Assistant</h2>
+            <button id="logout-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logout-icon">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                <span>Logout</span>
+            </button>
+        </header>
+        
+        <main class="main-content">
             <div class="gpt-intro">
-                <p>Questi chatbot personalizzati ti aiutano a esplorare in profondità gli instructional BJJ, offrendo spiegazioni dettagliate e link diretti ai punti esatti del video. Puoi fare domande su tecniche specifiche, concetti o transizioni, e ricevere risposte chiare con riferimento immediato alla dimostrazione dell'istruttore.</p>
+                <p>Assistenti virtuali specializzati che ti permettono di esplorare gli instructional di BJJ in modo efficiente. Ogni Custom GPT di OpenAI è addestrato su un singolo instructional e fornisce spiegazioni dettagliate con link diretti ai timestamp esatti dei video, permettendoti di accedere immediatamente alle dimostrazioni delle tecniche che ti interessano.</p>
                 <p>Ogni assistente è basato sulla trascrizione completa di un singolo instructional e ne rispecchia terminologia, struttura e approccio didattico, rendendolo uno strumento utile per ripassare, approfondire o integrare il lavoro fatto in palestra.</p>
             </div>
             
@@ -98,7 +97,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
     
     <script src="main.js"></script>
