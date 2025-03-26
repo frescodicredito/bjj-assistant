@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BJJ Assistant</title>
+    <title>🥋 BJJ Instructional Assistants</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="app-container">
         <header class="app-header">
-            <h2 class="title">BJJ Assistant</h2>
-            <button id="logout-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logout-icon">
-                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                    <polyline points="16 17 21 12 16 7"></polyline>
-                    <line x1="21" y1="12" x2="9" y2="12"></line>
-                </svg>
-                <span>Logout</span>
-            </button>
+            <h1 class="title">🥋 BJJ Instructional Assistants</h1>
+            <button id="logout-button">Logout</button>
         </header>
-        
-        <main class="main-content">
-            <div class="gpt-intro">
-                <p>Assistenti virtuali specializzati che ti permettono di esplorare gli instructional di BJJ in modo efficiente. Ogni Custom GPT di OpenAI è addestrato su un singolo instructional e fornisce spiegazioni dettagliate con link diretti ai timestamp esatti dei video, permettendoti di accedere immediatamente alle dimostrazioni delle tecniche che ti interessano.</p>
-                <p>Ogni assistente è basato sulla trascrizione completa di un singolo instructional e ne rispecchia terminologia, struttura e approccio didattico, rendendolo uno strumento utile per ripassare, approfondire o integrare il lavoro fatto in palestra.</p>
+        <div class="content">
+            <div class="welcome-section">
+                <h2>Benvenuto nella biblioteca di assistenti personalizzati per il BJJ!</h2>
+                <p>Ogni link ti collega a un Custom GPT di OpenAI esperto in uno specifico instructional.</p>
+                <div class="how-to-use">
+                    <h3>Come utilizzarli:</h3>
+                    <ul>
+                        <li>📌 Seleziona l'instructional che ti interessa</li>
+                        <li>📚 Fai domande specifiche sulle tecniche o sui concetti</li>
+                        <li>🎬 Ricevi risposte dettagliate con link diretti ai timestamp esatti dei video</li>
+                        <li>📊 Consulta le tabelle riassuntive per navigare facilmente tra le tecniche</li>
+                    </ul>
+                    <p>Questi assistenti sono progettati per aiutarti a massimizzare il tuo apprendimento, rendendo ogni instructional completamente navigabile e accessibile. Buon allenamento!</p>
+                </div>
             </div>
             
             <div class="instructional-gallery">
@@ -104,7 +106,7 @@
                     </a>
                 </div>
             </div>
-        </main>
+        </div>
     </div>
     
     <script src="main.js"></script>

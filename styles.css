@@ -11,6 +11,7 @@
     --primary-hover: #2980b9;
     --shadow-color: rgba(0, 0, 0, 0.3);
     --technique-bg: #363636;
+    --card-bg: #2d2d2d;
 }
 
 /* Stili generali */
@@ -464,5 +465,76 @@ input:focus {
     #logout-button {
         padding: 6px 12px;
         font-size: 0.75rem;
+    }
+}
+
+.welcome-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section h2 {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.welcome-section p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.how-to-use {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.how-to-use h3 {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.how-to-use ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.how-to-use li {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.how-to-use li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .welcome-section {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-section p,
+    .how-to-use li {
+        font-size: 1rem;
     }
 }
