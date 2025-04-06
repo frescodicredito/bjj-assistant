@@ -11,7 +11,7 @@ Un'applicazione web per gestire e visualizzare tecniche di Brazilian Jiu-Jitsu, 
 
 ## Come utilizzare l'applicazione
 
-1. Accedi all'applicazione utilizzando la password: `bjj2023`
+1. Accedi all'applicazione 
 2. Naviga tra le diverse categorie di tecniche
 3. Clicca su una tecnica per visualizzare i dettagli, i video di riferimento e le note personali
 4. Utilizza il pulsante di logout per uscire dall'applicazione
